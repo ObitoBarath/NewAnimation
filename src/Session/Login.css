@@ -1,0 +1,10 @@
+.area-label{
+    color:  black;
+    font-size:  5rem;
+    font-weight : bold;
+}
+.title-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

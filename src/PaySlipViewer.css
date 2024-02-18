@@ -1,0 +1,86 @@
+body{
+    background-color  : black;
+}
+
+.left-container-panel{
+    border-right : 0.3rem solid white
+}
+.right-container-panel{
+    border-left : 0.3rem solid white;
+    /*position : absolute;*/
+
+}
+
+
+.color-left-line{
+    height : 0.1rem;
+    background: lightblue;
+    width : 100%;
+    top : 14rem;
+    -webkit-animation: animate-left-line ease 2s ;
+}
+
+.color-right-line{
+    height : 0.1rem;
+    background: lightblue;
+    width : 100%;
+    top : 14rem;
+    -webkit-animation: animate-right-line ease 2s ;
+}
+.rightcustomCardPanel{
+
+    animation :animate-border-left-color  forwards ease-in-out 1s ;
+    animation-delay: 1.5s;
+    /*border-right : 1rem solid lightblue;*/
+}
+.leftcustomCardPanel{
+
+    animation :animate-border-right-color  forwards ease-in-out 1s ;
+    animation-delay: 1.5s;
+    /*border-right : 1rem solid lightblue;*/
+}
+.roundedPoints{
+    height: 1rem;
+    width: 1rem;
+    background: red;
+    border-radius: 100%;
+}
+
+
+@keyframes animate-border-right-color {
+        0% {
+        border-right : 0rem transparent;
+            opacity : 0
+        }
+    100%{
+        border-right : 1rem solid lightblue;
+        opacity : 1
+    }
+}
+@keyframes animate-border-left-color {
+        0% {
+        border-left : 0rem transparent;
+            opacity : 0
+        }
+    100%{
+        border-left : 1rem solid lightblue;
+        opacity : 1
+    }
+}
+
+@keyframes animate-left-line {
+ 0%{
+     margin-left : 100%
+ }
+    100%{
+        margin-left : 0
+    }
+}
+@keyframes animate-right-line {
+ 0%{
+     margin-right : 100%
+ }
+    100%{
+        margin-right : 0
+    }
+}

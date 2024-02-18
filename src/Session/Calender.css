@@ -1,0 +1,9 @@
+.date{
+    height: 7rem;
+    width: 9rem;
+    border : 1px solid black;
+}
+.date:hover{
+    background-color: white;
+    color : black;
+}

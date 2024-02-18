@@ -1,0 +1,128 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.crossMoverUp{
+    height : 20%;
+    width : 100%;
+    background-color : red;
+    position : absolute;
+}
+.crossMoverDown{
+    height : 20%;
+    width : 100%;
+    background-color : blue;
+    position : absolute;
+    bottom : 0;
+}
+.closeLoadingPanel{
+
+
+animation :closeLoadingPanel 2s ease forwards;
+}
+
+@keyframes closeLoadingPanel {
+    0%{
+        height : 15%;
+        width : 50%;
+        border : 1px solid white;
+    }
+    50%{
+        height: 2% ;
+        width: 1% ;
+    }
+    100%{
+        height: 100% ;
+        width: 0.6% ;
+        background: white;
+        border-radius : 5rem;
+        /*margin-left :0.8%*/
+    }
+}
+
+
+.parent_loading{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    background-color : transparent;
+    height: 100%;
+    width: 100%;
+    position  : absolute;
+    overflow : hidden;
+}
+.loadingBar{
+    border: 1px solid white;
+    border-radius: 1rem;
+    border-left : none;
+    border-right : none;
+
+    animation: wider 3s ease forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    font-size: 1.5rem;
+}
+.loadingBar svg:nth-child(1) { animation-delay: .5s }
+.loadingBar svg:nth-child(2) { animation-delay: .7s }
+.loadingBar svg:nth-child(3) { animation-delay: .9s }
+.loadingBar svg:nth-child(4) { animation-delay: 1.2s }
+
+.loadingBar  svg {
+
+/*animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53)  both*/
+
+animation:focus-in-expand-fwd .8s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+.loadingBar  svg:active {
+
+    /*animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53)  both*/
+
+    animation:focus-in-expand-fwd .8s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+@keyframes glow {
+ 0%{
+
+ }
+    100%{
+        filter: drop-shadow(0px 0px 11px white);
+
+    }
+}
+
+@keyframes focus-in-expand-fwd{0%{letter-spacing:-.5em;transform:translateZ(-800px);filter:blur(12px);opacity:0}100%{transform:translateZ(0);filter:blur(0);opacity:1}}
+@keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+@keyframes iconsShow {
+    0%{
+        /*display : block;*/
+        opacity : 0;
+    }
+    100%{
+        /*display : block;*/
+        opacity : 1;
+    }
+
+}
+
+
+@keyframes wider {
+    0%{
+        width : 0;
+    }
+
+    50%{
+        width : 50%;
+        height : 0
+    }
+    75%{
+        height : 25%
+    }
+    100%{
+        width : 50%;
+        height : 15%;
+        box-shadow: 0 0 10rem -1.9rem white;
+    }
+}
